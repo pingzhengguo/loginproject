@@ -44,21 +44,9 @@ public class ShiroConstant {
     public static String THIRD_ANON = "/thirdParty/**";
     //门户首页信息
     public static String HOME_ANON = "/home/**";
-    //新闻公告信息
-    public static String FILE_ANON = "/fileInfo/anon/**";
-    //资源目录的目录信息
-    public static String DIRECTORY_ANON = "/serviceDirectory/anon/**";
-    //资源目录的资源信息
-    public static String RESOURCE_ANON = "/resourceDirectory/resource/anon/**";
-    public static String MENU_ANON = "/resourceDirectory/directory/anon/**";
-    public static String INTERACTION_ANON = "/interactProblem/interaction/**";
-    public static String INTERACTION_PROBLEM_ANON = "/interactProblemType/interaction/**";
-    public static String PROCESS_USER_APPLY = "/process/userApply/anon/**";
-    public static String OG_SEARCH = "/sysuser/**";
     //文件操作
     public static String WORK_FLOW_FILE_UPLOAD = "/workFlow/fileUpload/**";
     public static String FILE_UPLOAD = "/fileUpload/**";
-    public static String FILE_INFO = "/components/anon/**";
     //用户注册是否开放
     public static String USER_REGISTRATION = "/systemManage/userManager/auth/**";
 

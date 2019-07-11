@@ -131,17 +131,8 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put(ShiroConstant.SYS_MANGER_ANON, "anon");
         filterChainDefinitionMap.put(ShiroConstant.THIRD_ANON, "anon");
         filterChainDefinitionMap.put(ShiroConstant.HOME_ANON, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.FILE_ANON, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.DIRECTORY_ANON, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.INTERACTION_ANON, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.INTERACTION_PROBLEM_ANON, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.RESOURCE_ANON, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.MENU_ANON, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.PROCESS_USER_APPLY, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.OG_SEARCH, "anon");
         filterChainDefinitionMap.put(ShiroConstant.WORK_FLOW_FILE_UPLOAD, "anon");
         filterChainDefinitionMap.put(ShiroConstant.FILE_UPLOAD, "anon");
-        filterChainDefinitionMap.put(ShiroConstant.FILE_INFO, "anon");
         filterChainDefinitionMap.put(ShiroConstant.USER_REGISTRATION, "anon");
 
         filterChainDefinitionMap.put(ShiroConstant.GUIDE_FOR_USE, "anon");
