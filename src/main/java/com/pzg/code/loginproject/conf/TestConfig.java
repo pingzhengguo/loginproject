@@ -5,6 +5,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
+//@PropertySource(value = "classpath:config/config_test.properties")
 public class TestConfig {
 
     @Value("${test.address}")
