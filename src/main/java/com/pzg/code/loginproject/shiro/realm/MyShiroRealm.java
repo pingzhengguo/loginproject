@@ -3,9 +3,6 @@ package com.pzg.code.loginproject.shiro.realm;
 import com.pzg.code.loginproject.conf.TestConfig;
 import com.pzg.code.loginproject.entity.Authority;
 import com.pzg.code.loginproject.entity.User;
-import com.pzg.code.loginproject.mapper.AuthorityMapper;
-import com.pzg.code.loginproject.mapper.RoleMapper;
-import com.pzg.code.loginproject.mapper.UserMapper;
 import com.pzg.code.loginproject.service.UserService;
 import com.pzg.code.loginproject.utils.MD5SignUtil;
 import com.pzg.code.loginproject.vo.UserVo;
@@ -38,13 +35,6 @@ public class MyShiroRealm extends AuthorizingRealm {
 
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private UserMapper userMapper;
-    @Autowired
-    private RoleMapper roleMapper;
-    @Autowired
-    private AuthorityMapper authorityMapper;
 
     /**
      * @Description: 1、CAS单点登录认证 ,验证用户身份（默认是自动认证的 这里手动实现一下） 2、将用户的相关信息放置到session中,方便获取

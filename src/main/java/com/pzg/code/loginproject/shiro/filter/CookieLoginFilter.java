@@ -68,7 +68,7 @@ public class CookieLoginFilter extends OncePerRequestFilter {
     protected void doFilterInternal(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws ServletException, IOException {
         HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
-        if (!testConfig.getTestLogin().equals(2)) {
+        if (!testConfig.getTestLogin().equals("2")) {
             //未开启单点登录功能
             filterChain.doFilter(httpRequest, httpResponse);
             return;
