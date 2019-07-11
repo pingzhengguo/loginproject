@@ -3,6 +3,7 @@ package com.pzg.code.loginproject.controller;
 import com.pzg.code.loginproject.entity.User;
 import com.pzg.code.loginproject.mapper.UserMapper;
 import com.pzg.code.loginproject.utils.ResultInfo;
+import com.pzg.code.loginproject.vo.UserVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -43,5 +45,17 @@ public class UserController {
     public ResultInfo getAnonAllTestUser() {
         List<User> users = userMapper.selectAll();
         return ResultInfo.success().build(users);
+    }
+
+    @ApiOperation(value = "getSessionUser", httpMethod = "GET", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/getSessionUser", method = RequestMethod.GET)
+    @ResponseBody
+    public ResultInfo getSessionUser(HttpSession session) {
+        Object loginUser = session.getAttribute("loginUser");
+        if (loginUser != null) {
+            UserVo userVo = (UserVo) loginUser;
+            return ResultInfo.success().build(userVo);
+        }
+        return null;
     }
 }
